@@ -5,6 +5,10 @@
 // oleh: sonadztux https://github.com/sonadztux/
 // Idea: Web Programming UNPAS ( https://www.youtube.com/watch?v=Mmf3SXHifBw )
 
+// Hubungkan fail JavaScript ini ke fail HTML dengan 
+// menambahkan <script src="tebakAngka.js"></script>
+// tepat di atas tag </body>
+
 alert('Selamat datang di game Tebak Angka.'
       +  '\nKamu memiliki 3 kesempatan untuk menebak sebuah angka 1-10.');
 
