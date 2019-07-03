@@ -5,18 +5,18 @@
 // menambahkan <script src="suwitJawa.js"></script>
 // tepat di atas tag </body>
 
-var replay = 'true'; // variabel untuk looping
+let replay = true; // variabel untuk looping
 
-while(replay) {
+while (replay){
     // Meminta pilihan dari player (user)
-    var playerChoice = prompt('Pilih: gajah, semut, orang, atau ketik keluar untuk menutup permainan');
+    let playerChoice = prompt('Pilih: gajah, semut, orang, atau ketik keluar untuk menutup permainan.');
 
     // Menentukan pilihan komputer secara random
-    var compChoice = Math.random();
+    let compChoice = Math.random();
 
-    if(compChoice < 0.34) {
+    if (compChoice < 0.34) {
         compChoice = 'gajah';
-    }else if(compChoice >= 0.34 && compChoice < 0.67){
+    }else if (compChoice >= 0.34 && compChoice <= 0.67) {
         compChoice = 'semut';
     }else {
         compChoice = 'orang';
@@ -25,10 +25,10 @@ while(replay) {
     // Menentukan peraturan untuk membandingkan pilihan 
     // player dengan komputer
 
-    var result = ''; // Variabel penampung hasil perbandingan
+    let result = ''; // Variabel penampung hasil perbandingan
 
-    // Pesan hasil pertandingan
-    var message = 'Kamu memilih ' +playerChoice+ ' dan komputer memilih ' +compChoice+ '\nMaka hasil suwit: KAMU ' +result; 
+    // Pesan untuk menampilkan hasil suwit
+    let message = 'Kamu memilih ' +playerChoice+ ' dan komputer memilih ' +compChoice+ '\nMaka hasil suwit: KAMU ' +result;
 
     if(playerChoice == compChoice) {
         result = 'SERI !!';
@@ -45,10 +45,9 @@ while(replay) {
         replay = false;
         break;
     }else {
-        alert('Duh.. pilihan kamu salah.')
+        alert('Duh.. pilihan kamu salah.');
     }
 }
 
 // Keluar dari game
-alert('Terima kasih sudah bermain.')
-
+alert('Terima kasih sudah bermain.');
