@@ -65,8 +65,8 @@ const tambahPenumpang = function (namaPenumpang) {
             message = namaPenumpang + ' berhasil naik ke dalam angkot';
         }
     }
-    console.log(penumpang)
-    if (penumpang.length === 9) {
+    
+    if (penumpang.length === 9 && !penumpang.includes(undefined)) {
         status[1].setAttribute('value', 'Penumpang Penuh')
     } else {
         const undef = itemDuplicateCount(penumpang, undefined)
@@ -77,18 +77,24 @@ const tambahPenumpang = function (namaPenumpang) {
 
 const hapusPenumpang = function (namaPenumpang) {
     let i = penumpang.indexOf(namaPenumpang);
-    const ongkosPenumpang = parseInt(prompt('Bayar ongkos penumpang!'));
+    while(true) {
+        const ongkosPenumpang = parseInt(prompt('Bayar ongkos penumpang!'));
 
-    kas_sopir += ongkosPenumpang;
-    penumpang[i] = undefined;
-    tempatDuduk[i].classList.remove('booked');
-    tempatDuduk[i].textContent = (i + 1);
-    console.log(penumpang)
+        if(isNaN(ongkosPenumpang)) {
+            alert('WOI BAYAR WOI!');
+            continue;
+        }
 
-    status[0].setAttribute('value', 'Rp' + kas_sopir)
-    const undef = itemDuplicateCount(penumpang, undefined)
-    status[1].setAttribute('value', (penumpang.length-undef) + ' Penumpang')
-    return alert(namaPenumpang + ' berhasil turun dari angkot.')
+        kas_sopir += ongkosPenumpang;
+        penumpang[i] = undefined;
+        tempatDuduk[i].classList.remove('booked');
+        tempatDuduk[i].textContent = (i + 1);
+
+        status[0].setAttribute('value', 'Rp' + kas_sopir)
+        const undef = itemDuplicateCount(penumpang, undefined)
+        status[1].setAttribute('value', (penumpang.length-undef) + ' Penumpang')
+        return alert(namaPenumpang + ' berhasil turun dari angkot.')
+    }
 }
 
 // Function to counting duplicate item/values in array
