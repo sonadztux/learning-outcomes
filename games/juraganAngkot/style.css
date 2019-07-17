@@ -58,6 +58,13 @@ hr {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+.angkot .sopir {
+    border: 1px solid rgb(175, 15, 15);
+    background-color: rgb(175, 15, 15);
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 .angkot #pintu {
     border: 0;
 }
