@@ -2,49 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Javascript Function</title>
-    
+    <title>Juragan Angkot | Aplikasi Sederhana Pengelolaan Penumpang dan Kas Sopir Angkot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Juragan Angkot</h1>
-            <p class="lead">Aplikasi Pengelolaan Penumpang dan Kas Sopir.</p>
-            <hr class="my-4">
-            <button class="up">Naik</button>
-            <button class="down">Turun</button>
+
+    <div class="container" align="center">
+        <h1>Juragan Angkot</h1>
+        <p>Aplikasi Sederhana Pengelolaan Penumpang dan Kas Sopir Angkot</p>
+        <hr>
+
+        <div class="container status">
+            <label>Kas Sopir:</label>
+            <input type="text" id="kas_sopir" value="Rp0" disabled>
+            <label>Status Penumpang:</label>
+            <input type="text" id="penumpang" name="penumpang" value="0 Penumpang" disabled>
         </div>
-    </div>
-    
-    <div class="tab">
-        <table border='1'>
+
+        <table class="angkot" border="1">
             <tr>
-                <td class="block">DRIVER</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-            <tr><td>7</td>
-                <td colspan="7" rowspan="1" class="in"></td>
+                <td class="booked">SOPIR</td>
+                <td class="tempat-duduk">1</td>
+                <td class="tempat-duduk">2</td>
+                <td class="tempat-duduk">3</td>
+                <td class="tempat-duduk">4</td>
             </tr>
             <tr>
-                <td>8</td>
-                <td class="in"></td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
+                <td class="tempat-duduk">5</td>
+            </tr>
+            <tr>
+                <td class="tempat-duduk">6</td>
+                <td id="pintu"></td>
+                <td class="tempat-duduk">7</td>
+                <td class="tempat-duduk">8</td>
+                <td class="tempat-duduk">9</td>
             </tr>
         </table>
+
+        <button id="naik">NAIK</button>
+        <button id="turun">TURUN</button>
     </div>
 
-    
     <script src="script.js"></script>
 </body>
 </html>
