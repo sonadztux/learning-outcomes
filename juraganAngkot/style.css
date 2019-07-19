@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+body {
+    line-height: 1;
+    font: 20px Arial, Helvetica, sans-serif;
+    color: rgb(15, 52, 175);
+}
+.container {
+    padding: 10px;
+    width: 95%;
+    margin: 10px auto;
+}
+.status {
+    color: rgb(175, 15, 15);
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.status input{
+    width: 15%;
+    border: 0;
+    background-color: transparent;
+    font: 20px Arial, Helvetica, sans-serif;
+    color: rgb(175, 15, 15);
+}
+h1 {
+    font-size: 2em;
+    padding-top: 20px;
+}
+hr {
+    margin: 10px;
+    height: 3px;
+    width: 50%;
+    background-color: rgb(15, 52, 175);
+}
+.angkot {
+    border: 5px solid;
+    width: 55%;
+    height: 300px;
+}
+.angkot td {
+    border: 2px solid;
+    text-align: center;
+    font-size: 4em;
+    width: 20%;
+    height: 100px; 
+}
+.angkot .booked {
+    border: 1px solid rgb(15, 52, 175);
+    background-color: rgb(15, 52, 175);
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.angkot .sopir {
+    border: 1px solid rgb(175, 15, 15);
+    background-color: rgb(175, 15, 15);
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.angkot #pintu {
+    border: 0;
+}
+button {
+    width: 120px;
+    height: 40px;
+    font-size: 1.3em;
+    align-content: center;
+    margin: 25px 10px;
+}
+#naik {
+    color: white;
+    border: 1px solid rgb(15, 52, 175);
+    border-radius: 5px;
+    background-color: rgb(15, 52, 175);
+    
+}
+#naik:hover, #naik:active {
+    background-color: rgb(29, 72, 214);
+    color: rgb(231, 231, 231);
+}
+#turun {
+    color: white;
+    border: 1px solid rgb(175, 15, 15);
+    border-radius: 5px;
+    background-color: rgb(175, 15, 15);
+    
+}
+#turun:hover, #turun:active {
+    background-color: rgb(214, 29, 29);
+    color: rgb(231, 231, 231);
+}
+#naik:active, #turun:active {
+    border-radius: 8px;
+}
